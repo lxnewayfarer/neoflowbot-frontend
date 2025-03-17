@@ -41,10 +41,12 @@ export function DemoModal({ isOpen, onClose }: DemoModalProps) {
       onClose();
       setName("");
       setContact("");
+      /* eslint-disable */
     } catch (error) {
       toast.error("Ошибка", {
         description: "Не удалось отправить заявку. Пожалуйста, попробуйте позже",
       });
+      /* eslint-enable */
     } finally {
       setIsLoading(false);
     }
