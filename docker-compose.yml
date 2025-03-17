@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  web:
+    image: ${REGISTRY_URL}/inflowbot-frontend:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - .env.production
