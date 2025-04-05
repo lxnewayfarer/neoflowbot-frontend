@@ -13,7 +13,7 @@ export function HowItWorksSection() {
     {
       icon: Settings,
       title: "2. Интеграция",
-      description: "Подключаем InFlowBot к вашим системам, настраиваем ИИ-ассистента",
+      description: "Подключаем NeoFlowBot к вашим системам, настраиваем ИИ-ассистента",
     },
     {
       icon: ShieldCheck,

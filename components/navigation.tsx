@@ -26,7 +26,7 @@ export function Navigation() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            InFlowBot
+            NeoFlowBot
           </motion.a>
 
           {/* Десктопное меню */}

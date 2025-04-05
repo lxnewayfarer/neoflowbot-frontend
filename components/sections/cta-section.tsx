@@ -19,7 +19,7 @@ export function CTASection() {
               Готовы автоматизировать продажи?
             </h2>
             <p className="mx-auto max-w-[600px] text-base sm:text-lg text-foreground/80">
-              Подключите InFlowBot прямо сейчас и увеличьте эффективность вашего бизнеса
+              Подключите NeoFlowBot прямо сейчас и увеличьте эффективность вашего бизнеса
             </p>
           </motion.div>
           <motion.div

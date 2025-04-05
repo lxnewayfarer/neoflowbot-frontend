@@ -17,7 +17,7 @@ export function Header() {
             <div className="relative w-10 h-10">
               <Image
                 src="/images/logo.svg"
-                alt="InFlowBot Logo"
+                alt="NeoFlowBot Logo"
                 fill
                 className="object-contain transition-transform duration-300 group-hover:scale-110"
                 priority
@@ -29,7 +29,7 @@ export function Header() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              InFlowBot
+              NeoFlowBot
             </motion.span>
           </Link>
           

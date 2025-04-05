@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Лого и описание */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-gradient">InFlowBot</h3>
+            <h3 className="text-xl font-bold text-gradient">NeoFlowBot</h3>
             <p className="text-sm text-muted-foreground">
               Умный бот для вашего бизнеса с искусственным интеллектом
             </p>
@@ -44,11 +44,11 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4" /> {/* Иконка для email */}
-                <p>inflowbot@yandex.ru</p>
+                <p>neoflowbot@yandex.ru</p>
               </li>
               <li className="flex items-center gap-2">
                 <Send className="w-4 h-4" /> {/* Иконка для Telegram */}
-                <p>inflowbot_support</p>
+                <p>neoflowbot_support</p>
               </li>
             </ul>
           </div>
@@ -56,7 +56,7 @@ export function Footer() {
 
         {/* Копирайт */}
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>InFlowBot. 2025</p>
+          <p>NeoFlowBot. 2025</p>
         </div>
       </div>
     </footer>

@@ -6,9 +6,9 @@ import { Header } from "@/components/layout/header";
 import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
-  title: "InFlowBot - Умные боты для вашего бизнеса",
+  title: "NeoFlowBot - Умные боты для вашего бизнеса",
   description:
-    "InFlowBot - платформа, которая помогает магазинам увеличивать продажи с помощью интеллектуальных чат-ботов",
+    "NeoFlowBot - платформа, которая помогает магазинам увеличивать продажи с помощью интеллектуальных чат-ботов",
 };
 
 const openSans = Open_Sans({

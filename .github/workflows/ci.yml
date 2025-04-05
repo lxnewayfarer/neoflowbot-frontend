@@ -27,7 +27,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.REGISTRY_URL }}/inflowbot-frontend:latest
+          tags: ${{ secrets.REGISTRY_URL }}/neoflowbot-frontend:latest
 
   deploy:
     runs-on: ubuntu-latest
@@ -47,11 +47,11 @@ jobs:
           ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
 
       - name: Copy docker-compose.yml to VPS
-        run: scp -o StrictHostKeyChecking=no docker-compose.yml ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/${{ secrets.VPS_USER }}/inflowbot-frontend/
+        run: scp -o StrictHostKeyChecking=no docker-compose.yml ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/${{ secrets.VPS_USER }}/neoflowbot-frontend/
 
       - name: Create .env file on VPS
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "echo '${{ secrets.ENV_FILE }}' > /${{ secrets.VPS_USER }}/inflowbot-frontend/.env.production"
+          ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "echo '${{ secrets.ENV_FILE }}' > /${{ secrets.VPS_USER }}/neoflowbot-frontend/.env.production"
 
       - name: Docker login on VPS
         run: |
@@ -62,7 +62,8 @@ jobs:
       - name: Deploy to VPS
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
-            cd /${{ secrets.VPS_USER }}/inflowbot-frontend
+            cd /${{ secrets.VPS_USER }}/neoflowbot-frontend
             docker-compose pull
             docker-compose up -d
+            docker images --filter "dangling=true" -q --no-trunc | xargs -r docker rmi
           EOF
